@@ -1,0 +1,190 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    color: #d40511;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section with Plane Animation */
+.hero {
+    position: relative;
+    background-image: url('https://example.com/dhl-background.jpg'); /* Replace with actual DHL image URL */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.hero h2, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d40511;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated DHL Plane */
+.plane {
+    position: absolute;
+    top: 20%;
+    left: -150px;
+    width: 150px;
+    height: 75px;
+    background-image: url('https://live.staticflickr.com/65535/49635456842_4053a70a53_b.jpg'); /* DHL plane image URL */
+    background-size: cover;
+    animation: fly 10s linear infinite;
+    z-index: 2;
+}
+
+@keyframes fly {
+    from {
+        left: -150px;
+        transform: rotate(5deg);
+    }
+    to {
+        left: 100%;
+        transform: rotate(-5deg);
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.service-box {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.tracking-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.tracking-section form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tracking-section input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #d40511;
+    border-radius: 5px;
+}
+
+.tracking-section button {
+    padding: 10px 20px;
+    background-color: #d40511;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.contact-section p, .contact-section ul {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
